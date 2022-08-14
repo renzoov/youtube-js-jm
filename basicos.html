@@ -141,6 +141,257 @@
     // let noEsUnNumero = "hola" * 3.7;
     // console.log(noEsUnNumero);
 
+    /********** Funciones **********/
+    // Funcion Declarada
+    // function estoEsUnaFuncion() {
+    //   console.log("Esto es una funcion");
+    // }
+    // // Invoca la funcion
+    // estoEsUnaFuncion();
+
+    // function unaFuncionQueDevuelveUnValor() {
+    //   console.log("Función que devuelve un valor");
+    //   return "La función ha retornado una cadena de texto";
+    // }
+
+    // let valorDeFuncion = unaFuncionQueDevuelveUnValor();
+    // console.log(valorDeFuncion);
+
+    // function saludar(nombre = "Desconocido", edad = 0) {
+    //   console.log(`Hola mi nombre es ${nombre} y tengo ${edad} años`);
+    // }
+
+    // saludar("Renzo", 35);
+    // saludar();
+
+    // // Funciones declaradas vs funciones expresadas
+
+    // funcionDeclarada();
+
+    // function funcionDeclarada() {
+    //   console.log("Funcion declarada");
+    // }
+
+    // // Funcion anonima
+    // const funcionExpresada = function () {
+    //   console.log("Funcion expresada");
+    // }
+
+    // funcionExpresada();
+
+    /********** Arreglos **********/
+    // const a = [];
+    // const b = [1, true, "Hola", ["A", "B", "C", [1, 2, 3]]];
+    // console.log(a);
+    // console.log(b);
+    // console.log(b.length);
+    // console.log(b[2]);
+    // console.log(b[3][2]);
+    // console.log(b[3][2][0]);
+
+    // const c = Array.of("X", "Y", "Z", 9, 8, 7);
+    // console.log(c);
+
+    // const d = Array(100).fill(false);
+    // console.log(d);
+
+    // const e = new Array();
+    // console.log(e);
+
+    // const f = new Array(1, 2, 3, true, false);
+    // console.log(f);
+
+    // const colores = ["Rojo", "Verde", "Azul"];
+    // console.log(colores);
+    // colores.push("Negro")
+    // console.log(colores);
+    // colores.pop()
+    // console.log(colores);
+
+    // colores.forEach(function (el, index) {
+    //   console.log(`<li id="${index}">${el}</li>`)
+    // })
+
+    /********** Objetos **********/
+    // const a = {}
+    // console.log(a);
+
+    // const b = new Object();
+    // console.log(b);
+
+    // const renzo = {
+    //   nombre: "Renzo",
+    //   apellido: "Osorio",
+    //   edad: 35,
+    //   pasatiempos: ["Correr", "Estudiar", "Boxear"],
+    //   soltero: false,
+    //   contacto: {
+    //     email: "renzo@gmail.com",
+    //     twiiter: "@renzoov",
+    //     movil: "51969785788"
+    //   },
+    //   saludar: function () {
+    //     console.log(`Hola :)`)
+    //   },
+    //   nombreCompleto: function () {
+    //     console.log(`Mi nombre completo es ${this.nombre} ${this.apellido}`)
+    //   }
+    // }
+    // console.log(renzo);
+    // console.log(renzo["nombre"]);
+    // console.log(renzo.nombre);
+    // console.log(renzo.pasatiempos[2]);
+    // console.log(renzo.contacto.email);
+    // renzo.saludar();
+    // renzo.nombreCompleto();
+
+    // console.log(Object.keys(renzo));
+    // console.log(Object.values(renzo));
+    // console.log(renzo.hasOwnProperty("nombre"));
+
+    /********** Tipos de Operadores **********/
+    // let a = (5 + 5) * 3;
+    // console.log(a);
+
+    // let modulo = 5 % 2;
+    // console.log(modulo);
+
+    // console.log(8 > 9);
+    // console.log(8 >= 9);
+    // console.log(7 < 7);
+    // console.log(7 <= 7);
+
+    /*
+      = 1 igual es asignación de variable
+      == 2 iguales es comparación de valores
+      === 3 iguales es comparación de tipo de dato y valor
+    */
+
+    // console.log(7 == 7);
+    // console.log("7" == 7);
+    // console.log(0 == false);
+
+    // console.log(7 === 7);
+    // console.log("7" === 7);
+    // console.log(0 === false);
+
+    // let i = 1;
+    // i = i + 2;
+    // i += 3;
+    // i -= 3;
+    // i /= 3;
+    // i *= 3;
+
+    // i++;
+    // i--;
+    // ++i;
+    // --i;
+    // console.log(i);
+
+    // console.log(!true);
+    // console.log(!false);
+    // console.log(9 === 9 || "9" === 9);
+    // console.log(9 === 9 && "9" === 9);
+
+    /********** Condicionales **********/
+    // let edad = 17;
+
+    // if (edad > 17) console.log("Eres mayor de edad");
+    // else console.log("Eres menor de edad");
+
+    // if (edad >= 18) console.log("Eres mayor de edad");
+    // else console.log("Eres menor de edad");
+
+    // if (edad < 18) console.log("Eres menor de edad");
+    // else console.log("Eres mayor de edad");
+
+    // if (edad <= 17) console.log("Eres menor de edad");
+    // else console.log("Eres mayor de edad");
+
+    // let hora = 20;
+    // if (hora >= 0 && hora <= 5) console.log("Dejame dormir");
+    // else if (hora >= 6 && hora <= 11) console.log("Buenos días");
+    // else if (hora >= 12 && hora <= 18) console.log("Buenas tardes");
+    // else console.log("Buenas noches");
+
+    // let edad = 17;
+    // let eresMayor = edad >= 18 ? "Eres mayor de edad" : "Eres menor de edad";
+    // console.log(eresMayor);
+
+    // let dia = 2;
+    // switch (dia) {
+    //   case 1:
+    //     console.log("Lunes");
+    //     break;
+    //   case 2:
+    //     console.log("Martes");
+    //     break;
+    //   case 3:
+    //     console.log("Miercoles");
+    //     break;
+    //   case 4:
+    //     console.log("Jueves");
+    //     break;
+    //   case 5:
+    //     console.log("Viernes");
+    //     break;
+    //   case 6:
+    //     console.log("Sábado");
+    //     break;
+    //   case 7:
+    //     console.log("Domingo");
+    //     break;
+    //   default:
+    //     console.log("No es un día válido");
+    // }
+
+    /********** Ciclos **********/
+    // let contador = 0;
+
+    // while (contador < 10) {
+    //   console.log("while: " + contador);
+    //   contador++;
+    // }
+
+    // do {
+    //   console.log("do while: " + contador);
+    //   contador++;
+    // } while (contador < 10);
+
+    // for (let i = 0; i < 10; i++) {
+    //   console.log("for: " + i);
+    // }
+
+    // let numeros = [10, 20, 30, 40, 50, 60, 70, 80, 90];
+
+    // for (let i = 0; i < numeros.length; i++) {
+    //   console.log(numeros[i]);
+    // }
+
+    // for (const numero in numeros) {
+    //   console.log(numeros[numero]);
+    // }
+
+    // const renzo = {
+    //   nombre: "Renzo",
+    //   apellido: "Osorio",
+    //   edad: 35,
+    // }
+
+    // for (const propiedad in renzo) {
+    //   console.log(`Key: ${propiedad}, Value: ${renzo[propiedad]}`);
+    // }
+
+    // for (const elemento of numeros) {
+    //   console.log(elemento);
+    // }
+
+    // let cadena = "Hola Mundo";
+
+    // for (const caracter of cadena) {
+    //   console.log(caracter);
+    // }
+
   </script>
 </body>
 
