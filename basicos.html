@@ -392,6 +392,113 @@
     //   console.log(caracter);
     // }
 
+    /********** Manejo de Errores **********/
+    // try {
+    //   console.log("En el Try se agrega codigo a evaluar");
+    //   noExiste;
+    // } catch (error) {
+    //   console.log("El Catch captura cualquier error surgido en el Try");
+    //   console.log(error);
+    // } finally {
+    //   console.log("El Finally se ejecutará siempre al final del unbloque Try-Catch");
+    // }
+
+    // try {
+    //   let numero = "y";
+
+    //   if (isNaN(numero)) {
+    //     throw new Error("El valor no es un número");
+    //   }
+    //   console.log(numero * numero);
+    // } catch (error) {
+    //   throw new Error("Se produjo el siguiente error: " + error);
+    // }
+
+    /********** break y continue **********/
+    // const numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
+
+    // for (let i = 0; i < numeros.length; i++) {
+    //   if (i === 5) {
+    //     console.log("Se encontró el 5");
+    //     break;
+    //   }
+    //   console.log(numeros[i]);
+    // }
+
+    // for (let i = 0; i < numeros.length; i++) {
+    //   if (i === 5) {
+    //     continue;
+    //   }
+    //   console.log(numeros[i]);
+    // }
+
+    /********** Destructuración **********/
+    // const numeros = [1, 2, 3];
+
+    // let uno = numeros[0],
+    //   dos = numeros[1],
+    //   tres = numeros[2];
+
+    // console.log(uno, dos, tres);
+
+    // const [one, two, three] = numeros;
+    // console.log(one, two, three);
+
+    // let persona = {
+    //   nombre: "Renzo",
+    //   apellido: "Osorio",
+    //   edad: 35,
+    // }
+
+    // let { nombre, apellido, edad } = persona;
+    // console.log(nombre, apellido, edad);
+
+    /********** Objetos literales **********/
+    // let nombre = "Gitano", edad = 7;
+
+    // const perro = {
+    //   nombre: nombre,
+    //   edad: edad,
+    //   ladrar: function () {
+    //     console.log("Woof Woof");
+    //   }
+    // }
+
+    // perro.ladrar();
+
+    // const dog = {
+    //   nombre,
+    //   edad,
+    //   ladrar() {
+    //     console.log("Woof Woof");
+    //   }
+    // }
+
+    // console.log(dog);
+
+    /********** Parametro REST y Operador Spread **********/
+    // function sumar(a, b, ...c) {
+    //   let resultado = a + b;
+
+    //   c.forEach((n) => {
+    //     resultado += n;
+    //   })
+
+    //   return resultado;
+    // }
+
+    // console.log(sumar(1, 2));
+    // console.log(sumar(1, 2, 3));
+
+    // const arr1 = [1, 2, 3, 4, 5], arr2 = [6, 7, 8, 9, 0];
+    // console.log(arr1, arr2);
+
+    // const arr3 = [arr1, arr2];
+    // console.log(arr3);
+
+    // const arr4 = [...arr1, ...arr2];
+    // console.log(arr4);
+
   </script>
 </body>
 
