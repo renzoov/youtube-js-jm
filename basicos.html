@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fundamentos JavaScript</title>
+</head>
+
+<body>
+  <h1>Fundamentos JavaScript</h1>
+
+  <script>
+    /* var hola = "Hola mundo";
+    console.log(hola);
+
+    let hello = "Hello world";
+    console.log(hello);
+
+    console.log(window);
+    console.log(window.hola);
+    console.log(window.hello);
+
+    // Ambito de bloque
+    console.log("************* var *************");
+    var musica = "Rock";
+    console.log("Variable música antes del bloque", musica);
+    {
+      var musica = "Pop";
+      console.log("Variable música dentro del bloque", musica);
+    }
+    console.log("Variable música después del bloque", musica);
+
+    console.log("************* let *************");
+
+    let musica2 = "Rock";
+    console.log("Variable música antes del bloque", musica2);
+    {
+      let musica2 = "Pop";
+      console.log("Variable música dentro del bloque", musica2);
+    }
+    console.log("Variable música después del bloque", musica2); */
+
+    /* const PI = 3.1416;
+    console.log(PI);
+
+    //const nueve; // las constantes siempre se deben declarar con un valor
+    // PI = 3; // no se puede cambiar el valor de una constante
+
+    const objeto = {
+      nombre: "Renzo",
+      edad: 35
+    }
+    console.log(objeto);
+
+    const colores = ["blanco", "negro", "azul"];
+    console.log(colores);
+
+    objeto.correo = "correo@gmail.com";
+    colores.push("amarillo");
+    console.log(objeto);
+    console.log(colores); */
+
+    // Cadenas de texto aka Strings
+    /* let nombre = "Renzo";
+    let apellido = 'Osorio';
+    let saludo = new String("Hola mundo");
+    let lorem = "    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s      "
+
+    console.log(nombre, apellido, saludo);
+    console.log(nombre.length, apellido.length, saludo.length);
+    console.log(nombre.toUpperCase(), apellido.toLowerCase());
+    console.log(lorem.includes("Lorem"));
+    console.log(lorem);
+    console.log(lorem.trim());
+    console.log(lorem.split(" "));
+    console.log(lorem.split(".")); */
+
+    /* let nombre = "Renzo";
+    let apellido = 'Osorio';
+
+    // Concatenación de cadenas de texto
+    let saludo = "Hola mi nombre es " + nombre + " " + apellido;
+    console.log(saludo);
+
+    // Interpolación de variables
+    // Template String
+    let saludo2 = `Hola mi nombre es ${nombre} ${apellido}`;
+    console.log(saludo2);
+
+    let ul = `
+    <ul>
+      <li>Primavera</li>
+      <li>Verano</li>
+      <li>Otoño</li>
+      <li>Invierno</li>
+    </ul>`;
+
+    console.log(ul);*/
+
+    /* let a = 2;
+    let b = new Number(1);
+    let c = 7.19;
+    let d = "5.6";
+
+    console.log(a, b);
+    console.log(c.toFixed(1));
+    console.log(c.toFixed(5));
+    console.log(parseInt(c));
+    console.log(parseFloat(c));
+    console.log(typeof c, typeof d);
+    console.log(a + b);
+    console.log(c + d);
+    console.log(c + parseInt(d));
+    console.log(c + parseFloat(d));
+    console.log(c + Number.parseInt(d));
+    console.log(c + Number.parseFloat(d));*/
+
+    /*let verdadero = true;
+    let falso = false;
+    let v = Boolean(true);
+    let f = Boolean(false);
+
+    console.log(verdadero, falso, v, f);
+    console.log(typeof verdadero, typeof falso);
+    console.log(Boolean(0));
+    console.log(Boolean(-7));
+    console.log(Boolean(""));
+    console.log(Boolean(" "));*/
+
+    // undefined indica que no se ha inicializado una variable y que el valor esta ausente
+    // let indefinida;
+    // console.log(indefinida);
+
+    // // null es un valor especial que indica la ausencia de un valor
+    // let nulo = null;
+    // console.log(nulo);
+
+    // // NAN - Not a Number
+    // let noEsUnNumero = "hola" * 3.7;
+    // console.log(noEsUnNumero);
+
+    /********** Funciones **********/
+    // Funcion Declarada
+    // function estoEsUnaFuncion() {
+    //   console.log("Esto es una funcion");
+    // }
+    // // Invoca la funcion
+    // estoEsUnaFuncion();
+
+    // function unaFuncionQueDevuelveUnValor() {
+    //   console.log("Función que devuelve un valor");
+    //   return "La función ha retornado una cadena de texto";
+    // }
+
+    // let valorDeFuncion = unaFuncionQueDevuelveUnValor();
+    // console.log(valorDeFuncion);
+
+    // function saludar(nombre = "Desconocido", edad = 0) {
+    //   console.log(`Hola mi nombre es ${nombre} y tengo ${edad} años`);
+    // }
+
+    // saludar("Renzo", 35);
+    // saludar();
+
+    // // Funciones declaradas vs funciones expresadas
+
+    // funcionDeclarada();
+
+    // function funcionDeclarada() {
+    //   console.log("Funcion declarada");
+    // }
+
+    // // Funcion anonima
+    // const funcionExpresada = function () {
+    //   console.log("Funcion expresada");
+    // }
+
+    // funcionExpresada();
+
+    /********** Arreglos **********/
+    // const a = [];
+    // const b = [1, true, "Hola", ["A", "B", "C", [1, 2, 3]]];
+    // console.log(a);
+    // console.log(b);
+    // console.log(b.length);
+    // console.log(b[2]);
+    // console.log(b[3][2]);
+    // console.log(b[3][2][0]);
+
+    // const c = Array.of("X", "Y", "Z", 9, 8, 7);
+    // console.log(c);
+
+    // const d = Array(100).fill(false);
+    // console.log(d);
+
+    // const e = new Array();
+    // console.log(e);
+
+    // const f = new Array(1, 2, 3, true, false);
+    // console.log(f);
+
+    // const colores = ["Rojo", "Verde", "Azul"];
+    // console.log(colores);
+    // colores.push("Negro")
+    // console.log(colores);
+    // colores.pop()
+    // console.log(colores);
+
+    // colores.forEach(function (el, index) {
+    //   console.log(`<li id="${index}">${el}</li>`)
+    // })
+
+    /********** Objetos **********/
+    // const a = {}
+    // console.log(a);
+
+    // const b = new Object();
+    // console.log(b);
+
+    // const renzo = {
+    //   nombre: "Renzo",
+    //   apellido: "Osorio",
+    //   edad: 35,
+    //   pasatiempos: ["Correr", "Estudiar", "Boxear"],
+    //   soltero: false,
+    //   contacto: {
+    //     email: "renzo@gmail.com",
+    //     twiiter: "@renzoov",
+    //     movil: "51969785788"
+    //   },
+    //   saludar: function () {
+    //     console.log(`Hola :)`)
+    //   },
+    //   nombreCompleto: function () {
+    //     console.log(`Mi nombre completo es ${this.nombre} ${this.apellido}`)
+    //   }
+    // }
+    // console.log(renzo);
+    // console.log(renzo["nombre"]);
+    // console.log(renzo.nombre);
+    // console.log(renzo.pasatiempos[2]);
+    // console.log(renzo.contacto.email);
+    // renzo.saludar();
+    // renzo.nombreCompleto();
+
+    // console.log(Object.keys(renzo));
+    // console.log(Object.values(renzo));
+    // console.log(renzo.hasOwnProperty("nombre"));
+
+    /********** Tipos de Operadores **********/
+    // let a = (5 + 5) * 3;
+    // console.log(a);
+
+    // let modulo = 5 % 2;
+    // console.log(modulo);
+
+    // console.log(8 > 9);
+    // console.log(8 >= 9);
+    // console.log(7 < 7);
+    // console.log(7 <= 7);
+
+    /*
+      = 1 igual es asignación de variable
+      == 2 iguales es comparación de valores
+      === 3 iguales es comparación de tipo de dato y valor
+    */
+
+    // console.log(7 == 7);
+    // console.log("7" == 7);
+    // console.log(0 == false);
+
+    // console.log(7 === 7);
+    // console.log("7" === 7);
+    // console.log(0 === false);
+
+    // let i = 1;
+    // i = i + 2;
+    // i += 3;
+    // i -= 3;
+    // i /= 3;
+    // i *= 3;
+
+    // i++;
+    // i--;
+    // ++i;
+    // --i;
+    // console.log(i);
+
+    // console.log(!true);
+    // console.log(!false);
+    // console.log(9 === 9 || "9" === 9);
+    // console.log(9 === 9 && "9" === 9);
+
+    /********** Condicionales **********/
+    // let edad = 17;
+
+    // if (edad > 17) console.log("Eres mayor de edad");
+    // else console.log("Eres menor de edad");
+
+    // if (edad >= 18) console.log("Eres mayor de edad");
+    // else console.log("Eres menor de edad");
+
+    // if (edad < 18) console.log("Eres menor de edad");
+    // else console.log("Eres mayor de edad");
+
+    // if (edad <= 17) console.log("Eres menor de edad");
+    // else console.log("Eres mayor de edad");
+
+    // let hora = 20;
+    // if (hora >= 0 && hora <= 5) console.log("Dejame dormir");
+    // else if (hora >= 6 && hora <= 11) console.log("Buenos días");
+    // else if (hora >= 12 && hora <= 18) console.log("Buenas tardes");
+    // else console.log("Buenas noches");
+
+    // let edad = 17;
+    // let eresMayor = edad >= 18 ? "Eres mayor de edad" : "Eres menor de edad";
+    // console.log(eresMayor);
+
+    // let dia = 2;
+    // switch (dia) {
+    //   case 1:
+    //     console.log("Lunes");
+    //     break;
+    //   case 2:
+    //     console.log("Martes");
+    //     break;
+    //   case 3:
+    //     console.log("Miercoles");
+    //     break;
+    //   case 4:
+    //     console.log("Jueves");
+    //     break;
+    //   case 5:
+    //     console.log("Viernes");
+    //     break;
+    //   case 6:
+    //     console.log("Sábado");
+    //     break;
+    //   case 7:
+    //     console.log("Domingo");
+    //     break;
+    //   default:
+    //     console.log("No es un día válido");
+    // }
+
+    /********** Ciclos **********/
+    // let contador = 0;
+
+    // while (contador < 10) {
+    //   console.log("while: " + contador);
+    //   contador++;
+    // }
+
+    // do {
+    //   console.log("do while: " + contador);
+    //   contador++;
+    // } while (contador < 10);
+
+    // for (let i = 0; i < 10; i++) {
+    //   console.log("for: " + i);
+    // }
+
+    // let numeros = [10, 20, 30, 40, 50, 60, 70, 80, 90];
+
+    // for (let i = 0; i < numeros.length; i++) {
+    //   console.log(numeros[i]);
+    // }
+
+    // for (const numero in numeros) {
+    //   console.log(numeros[numero]);
+    // }
+
+    // const renzo = {
+    //   nombre: "Renzo",
+    //   apellido: "Osorio",
+    //   edad: 35,
+    // }
+
+    // for (const propiedad in renzo) {
+    //   console.log(`Key: ${propiedad}, Value: ${renzo[propiedad]}`);
+    // }
+
+    // for (const elemento of numeros) {
+    //   console.log(elemento);
+    // }
+
+    // let cadena = "Hola Mundo";
+
+    // for (const caracter of cadena) {
+    //   console.log(caracter);
+    // }
+
+    /********** Manejo de Errores **********/
+    // try {
+    //   console.log("En el Try se agrega codigo a evaluar");
+    //   noExiste;
+    // } catch (error) {
+    //   console.log("El Catch captura cualquier error surgido en el Try");
+    //   console.log(error);
+    // } finally {
+    //   console.log("El Finally se ejecutará siempre al final del unbloque Try-Catch");
+    // }
+
+    // try {
+    //   let numero = "y";
+
+    //   if (isNaN(numero)) {
+    //     throw new Error("El valor no es un número");
+    //   }
+    //   console.log(numero * numero);
+    // } catch (error) {
+    //   throw new Error("Se produjo el siguiente error: " + error);
+    // }
+
+    /********** break y continue **********/
+    // const numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
+
+    // for (let i = 0; i < numeros.length; i++) {
+    //   if (i === 5) {
+    //     console.log("Se encontró el 5");
+    //     break;
+    //   }
+    //   console.log(numeros[i]);
+    // }
+
+    // for (let i = 0; i < numeros.length; i++) {
+    //   if (i === 5) {
+    //     continue;
+    //   }
+    //   console.log(numeros[i]);
+    // }
+
+    /********** Destructuración **********/
+    // const numeros = [1, 2, 3];
+
+    // let uno = numeros[0],
+    //   dos = numeros[1],
+    //   tres = numeros[2];
+
+    // console.log(uno, dos, tres);
+
+    // const [one, two, three] = numeros;
+    // console.log(one, two, three);
+
+    // let persona = {
+    //   nombre: "Renzo",
+    //   apellido: "Osorio",
+    //   edad: 35,
+    // }
+
+    // let { nombre, apellido, edad } = persona;
+    // console.log(nombre, apellido, edad);
+
+    /********** Objetos literales **********/
+    // let nombre = "Gitano", edad = 7;
+
+    // const perro = {
+    //   nombre: nombre,
+    //   edad: edad,
+    //   ladrar: function () {
+    //     console.log("Woof Woof");
+    //   }
+    // }
+
+    // perro.ladrar();
+
+    // const dog = {
+    //   nombre,
+    //   edad,
+    //   ladrar() {
+    //     console.log("Woof Woof");
+    //   }
+    // }
+
+    // console.log(dog);
+
+    /********** Parametro REST y Operador Spread **********/
+    // function sumar(a, b, ...c) {
+    //   let resultado = a + b;
+
+    //   c.forEach((n) => {
+    //     resultado += n;
+    //   })
+
+    //   return resultado;
+    // }
+
+    // console.log(sumar(1, 2));
+    // console.log(sumar(1, 2, 3));
+
+    // const arr1 = [1, 2, 3, 4, 5], arr2 = [6, 7, 8, 9, 0];
+    // console.log(arr1, arr2);
+
+    // const arr3 = [arr1, arr2];
+    // console.log(arr3);
+
+    // const arr4 = [...arr1, ...arr2];
+    // console.log(arr4);
+
+    /********** Objeto Date **********/
+    // console.log(Date());
+
+    // let fecha = new Date();
+    // console.log(fecha);
+    // console.log(fecha.getDate());
+    // console.log(fecha.getDay());
+    // console.log(fecha.getMonth());
+    // console.log(fecha.getFullYear());
+    // console.log(fecha.getHours());
+    // console.log(fecha.getMinutes());
+    // console.log(fecha.getSeconds());
+    // console.log(fecha.getMilliseconds());
+    // console.log(fecha.toDateString());
+    // console.log(fecha.toLocaleString());
+    // console.log(fecha.toLocaleDateString());
+    // console.log(fecha.toLocaleTimeString());
+    // console.log(fecha.getTimezoneOffset());
+
+    /********** Objeto Math **********/
+    // console.log(Math);
+    // console.log(Math.PI);
+    // console.log(Math.abs(-7.8));
+    // console.log(Math.ceil(7.8));
+    // console.log(Math.floor(7.8));
+    // console.log(Math.round(7.8));
+    // console.log(Math.sqrt(81));
+    // console.log(Math.pow(2, 5));
+    // console.log(Math.sign(-0.3));
+    // console.log(Math.random());
+    // console.log(Math.round(Math.random() * 1000));
+
+    /********** Expresiones Regulares **********/
+    // let cadena = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum";
+
+    // let expReg = new RegExp("lorem", "ig") //g - busca todas las coincidencias, i - ignora mayus y minus
+
+    // console.log(expReg.test(cadena));
+    // console.log(expReg.exec(cadena));
+
+    // let expReg2 = /lorem/ig;
+
+    // console.log(expReg2.test(cadena));
+    // console.log(expReg2.exec(cadena));
+
+    /********** Funciones Anónimas Autoejecutables **********/
+    // (function () {
+    //   console.log("Mi primera fae");
+    // })();
+
+    // (function (d, w, c) {
+    //   c.log("Mi primera fae");
+    //   d.getElementById("myId");
+    // })(document, window, console);
+
+    // // Versión Clásica
+    // (function () {
+    //   console.log("Mi primera fae");
+    // })();
+
+    // // Versión La Crockford (JavaScript The Good Parts)
+    // ((function () {
+    //   console.log("Mi primera fae");
+    // })());
+
+    // // Versión Unaria
+    // +function () {
+    //   console.log("Mi primera fae");
+    // }();
+
+    // // Versión Facebook
+    // !function () {
+    //   console.log("Mi primera fae");
+    // }();
+
+  </script>
+</body>
+
+</html>
