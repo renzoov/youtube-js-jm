@@ -176,56 +176,229 @@
 
     /************ Generators ****************/
 
-    function* iterable() {
-      yield "hola";
-      console.log("Hola consola");
-      yield "hola 2";
-      console.log("Seguimos con más instrucciones de nuestro código");
-      yield "hola 3";
-      yield "hola 4";
+    // function* iterable() {
+    //   yield "hola";
+    //   console.log("Hola consola");
+    //   yield "hola 2";
+    //   console.log("Seguimos con más instrucciones de nuestro código");
+    //   yield "hola 3";
+    //   yield "hola 4";
+    // }
+
+    // let iterador = iterable();
+    // // console.log(iterador.next());
+    // // console.log(iterador.next());
+    // // console.log(iterador.next());
+    // // console.log(iterador.next());
+    // // console.log(iterador.next());
+
+    // for (let y of iterador) {
+    //   console.log(y);
+    // }
+
+    // const arr = [...iterable()];
+    // console.log(arr);
+
+    // function cuadrado(valor) {
+    //   setTimeout(() => {
+    //     console.log({ valor, resultado: valor * valor });
+    //   }, Math.random() * 1000);
+
+    //   return {
+    //     valor,
+    //     resultado: valor * valor
+    //   }
+    // }
+
+    // function* generador() {
+    //   console.log("Inicia Generador");
+    //   yield cuadrado(0);
+    //   yield cuadrado(1);
+    //   yield cuadrado(2);
+    //   yield cuadrado(3);
+    //   yield cuadrado(4);
+    //   yield cuadrado(5);
+    //   console.log("Termina Generator");
+    // }
+
+    // let gen = generador();
+
+    // for (let y of gen) {
+    //   console.log(y);
+    // }
+
+    /************ Proxies ****************/
+
+    // const persona = {
+    //   nombre: "",
+    //   apellido: "",
+    //   edad: 0
+    // }
+
+    // const manejador = {
+    //   set(obj, prop, valor) {
+    //     if (Object.keys(obj).indexOf(prop) === -1) {
+    //       return console.error(`La propiedad "${prop}" no existe en el objeto persona`);
+    //     }
+
+    //     if ((prop === "nombre" || prop === "apellido") && !(/^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$/g.test(valor))) {
+    //       console.error(`La propiedad "${prop}" sólo acepta letras y espacios en blanco`)
+    //     }
+    //     obj[prop] = valor;
+    //   }
+    // }
+
+    // const juan = new Proxy(persona, manejador);
+    // juan.nombre = "Juan1";
+    // juan.apellido = "Perez";
+    // juan.edad = 35;
+    // juan.twitter = "@juanperez";
+    // console.log(juan);
+
+    /************ Propiedades dinamicas de los objetos ****************/
+
+    // let aleatorio = Math.round(Math.random() * 100 + 5);
+    // const objUsuarios = {
+    //   [`id_${aleatorio}`]: "Valor Aleatorio"
+    // };
+    // console.log(objUsuarios);
+
+    // const usuarios = ["Jon", "Irma", "Miguel", "Kala", "Pepe"];
+    // usuarios.forEach((usuario, index) => objUsuarios[`id_${index}`] = usuario);
+    // console.log(objUsuarios);
+
+    /************ this ****************/
+
+    // console.log(this);
+    // console.log(window);
+    // console.log(this === window);
+
+    // this.nombre = "Contexto Global";
+    // console.log(this.nombre);
+
+    // function imprimir() {
+    //   console.log(this.nombre);
+    // }
+
+    // imprimir();
+
+    // const obj = {
+    //   nombre: "Contexto Objeto",
+    //   imprimir: function () {
+    //     console.log(this.nombre);
+    //   }
+    // };
+
+    // obj.imprimir();
+
+    // const obj2 = {
+    //   nombre: "Contexto Objeto 2",
+    //   imprimir
+    // };
+
+    // obj2.imprimir();
+
+    // const obj3 = {
+    //   nombre: "Contexto Objeto 3",
+    //   imprimir: () => {
+    //     console.log(this.nombre);
+    //   }
+    // };
+
+    // obj3.imprimir();
+
+    // function Persona(nombre) {
+    //   const that = this;
+    //   //this.nombre = nombre;
+    //   that.nombre = nombre;
+
+    //   // return function () {
+    //   //   console.log(this.nombre);
+    //   // }
+
+    //   return function () {
+    //     console.log(that.nombre, 33);
+    //   }
+    // }
+
+    // let jon = new Persona("Jon");
+    // jon();
+
+    /************ call, apply, bind ****************/
+
+    // console.log(this);
+    // this.lugar = "Contexto Global";
+
+    // function saludar(saludo, aQuien) {
+    //   console.log(`${saludo} ${aQuien} desde el ${this.lugar}`);
+    // }
+
+    // saludar("Hola", "Mundo");
+
+    // const obj = {
+    //   lugar: "Contexto Objeto"
+    // };
+
+    // saludar.call(obj, "Hola", "Jon");
+    // saludar.call(null, "Hola", "Jon");
+    // saludar.call(this, "Hola", "Jon");
+    // saludar.apply(obj, ["Adios", "Mircha"]);
+    // saludar.apply(null, ["Adios", "Mircha"]);
+    // saludar.apply(this, ["Adios", "Mircha"]);
+
+    // const persona = {
+    //   nombre: "Juan",
+    //   saludar: function () {
+    //     console.log(`Hola ${this.nombre}`)
+    //   }
+    // }
+
+    // persona.saludar();
+
+    // const otraPersona = {
+    //   saludar: persona.saludar.bind(persona)
+    // }
+
+    // otraPersona.saludar();
+
+    /************ JSON ****************/
+
+    const json = {
+      cadena: "Juan",
+      numero: 23,
+      booleano: true,
+      arreglo: ["correr", "saltar", "dormir"],
+      objeto: {
+        twitter: "@juanex",
+        email: "juanex@gmail.com"
+      },
+      nulo: null
     }
 
-    let iterador = iterable();
-    // console.log(iterador.next());
-    // console.log(iterador.next());
-    // console.log(iterador.next());
-    // console.log(iterador.next());
-    // console.log(iterador.next());
+    console.log(json);
+    console.log(JSON);
+    console.log(JSON.parse("{}"));
+    console.log(JSON.parse("[1,2,3]"));
+    console.log(JSON.parse("true"));
+    console.log(JSON.parse("19"));
+    console.log(JSON.parse("null"));
 
-    for (let y of iterador) {
-      console.log(y);
-    }
+    console.log(JSON.stringify({}));
+    console.log(JSON.stringify([1, 2, 3]));
+    console.log(JSON.stringify(true));
+    console.log(JSON.stringify(null));
+    console.log(JSON.stringify(undefined));
+    console.log(JSON.stringify({ x: 2, y: 3 }));
 
-    const arr = [...iterable()];
-    console.log(arr);
-
-    function cuadrado(valor) {
-      setTimeout(() => {
-        console.log({ valor, resultado: valor * valor });
-      }, Math.random() * 1000);
-
-      return {
-        valor,
-        resultado: valor * valor
-      }
-    }
-
-    function* generador() {
-      console.log("Inicia Generador");
-      yield cuadrado(0);
-      yield cuadrado(1);
-      yield cuadrado(2);
-      yield cuadrado(3);
-      yield cuadrado(4);
-      yield cuadrado(5);
-      console.log("Termina Generator");
-    }
-
-    let gen = generador();
-
-    for (let y of gen) {
-      console.log(y);
-    }
+    console.log(JSON.stringify(json));
+    console.log(JSON.parse(`{"cadena": "Juan",
+      "numero": 23, "booleano": true, 
+      "arreglo": ["correr", "saltar", "dormir"],
+      "objeto": {
+      "twitter": "@juanex",
+      "email": "juanex@gmail.com"
+    },
+      "nulo": null}`));
   </script>
 </body>
 
