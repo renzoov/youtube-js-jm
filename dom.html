@@ -42,6 +42,24 @@
     .sepia {
       filter: sepia(1);
     }
+
+    .eventos-flujo div {
+      padding: 4rem;
+      font-size: 2rem;
+      text-align: center;
+    }
+
+    .uno {
+      background-color: yellow;
+    }
+
+    .dos {
+      background-color: gold;
+    }
+
+    .tres {
+      background-color: lightyellow;
+    }
   </style>
 </head>
 
@@ -120,7 +138,21 @@
   <button id="evento-multiple">Evento con manejador múltiple</button>
   <br><br>
   <button id="evento-remover">Removiendo eventos con manejadores múltiples</button>
-
+  <br><br>
+  <h4>Flujo de Eventos</h4>
+  <secion class="eventos-flujo">
+    <div class="uno">
+      1
+      <div class="dos">
+        2
+        <div class="tres">
+          3
+          <a href="https://jonmircha.com" target="_blank" rel="noopener">jonmircha.com</a>
+        </div>
+      </div>
+    </div>
+  </secion>
+  <h3 style="width: 2000px;">Manejo del BOM</h3>
   <script src="js/dom.js"></script>
 </body>
 

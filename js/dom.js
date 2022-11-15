@@ -405,3 +405,99 @@
 // $eventoRemover.addEventListener("dblclick", removerDobleClick);
 
 /************ DOM: Flujo de Eventos (Burbuja y Captura) ****************/
+
+// const $divsEventos = document.querySelectorAll(".eventos-flujo div");
+// console.log($divsEventos);
+
+// function flujoEventos(e) {
+//   console.log(
+//     `Hola te saluda ${this.className}, el click lo originó ${e.target.className}`
+//   );
+// }
+
+// $divsEventos.forEach((div) => {
+//   // fase de burbuja
+//   // div.addEventListener("click", flujoEventos); // por defecto el tercer parametro es false
+//   div.addEventListener("click", flujoEventos, false);
+//   // fase de captura
+//   // div.addEventListener("click", flujoEventos, true);
+//   div.addEventListener("click", flujoEventos, {
+//     capture: true,
+//     once: true, //el evento se ejecuta una sola vez
+//   });
+// });
+
+/************ DOM: stopPropagation & preventDefault ****************/
+
+// const $divsEventos = document.querySelectorAll(".eventos-flujo div");
+// const $linkEventos = document.querySelector(".eventos-flujo a");
+
+// function flujoEventos(e) {
+//   console.log(
+//     `Hola te saluda ${this.className}, el click lo originó ${e.target.className}`
+//   );
+
+//   e.stopPropagation();
+// }
+
+// $divsEventos.forEach((div) => {
+//   div.addEventListener("click", flujoEventos);
+// });
+
+// $linkEventos.addEventListener("click", (e) => {
+//   e.preventDefault();
+//   alert("Página de Jon Mircha");
+// });
+
+/************ DOM: Delegación de Eventos ****************/
+
+// function flujoEventos(e) {
+//   console.log(
+//     `Hola te saluda ${this}, el click lo originó ${e.target.className}`
+//   );
+// }
+
+// document.addEventListener("click", (e) => {
+//   console.log("Click en ", e.target);
+
+//   if (e.target.matches(".eventos-flujo div")) {
+//     flujoEventos(e);
+//   }
+
+//   if (e.target.matches(".eventos-flujo a")) {
+//     e.preventDefault();
+//     alert("Página de Jon Mircha");
+//   }
+// });
+
+/************ DOM: Propiedades y Eventos ****************/
+
+// window.addEventListener("resize", (e) => {
+//   console.clear();
+//   console.log("****** Evento Resize ******");
+//   console.log(window.innerWidth);
+//   console.log(window.innerHeight);
+//   console.log(window.outerWidth);
+//   console.log(window.outerHeight);
+//   console.log(window.scrollX);
+//   console.log(window.scrollY);
+// });
+
+// window.addEventListener("scroll", (e) => {
+//   console.clear();
+//   console.log("****** Evento Scroll ******");
+//   console.log(window.scrollX);
+//   console.log(window.scrollY);
+// });
+
+// window.addEventListener("load", (e) => {
+//   console.log("****** Evento Load ******");
+//   console.log(window.screenX);
+//   console.log(window.screenY);
+// });
+
+// document.addEventListener("DOMContentLoaded", (e) => {
+//   console.log("****** Evento DOMContentLoaded ******");
+//   console.log(window.screenX);
+//   console.log(window.screenY);
+// });
