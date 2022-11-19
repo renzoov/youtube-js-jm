@@ -136,7 +136,7 @@ video {
 
 /* **********     Eventos del Teclado     ********** */
 
-/* .stage {
+.stage {
   display: flex;
   min-height: 50vh;
   background-color: var(--second-color);
@@ -148,10 +148,10 @@ video {
   height: 4rem;
   border-radius: 50%;
   background-color: var(--main-color);
-} */
+}
 
 /* **********     ScrollTopButton     ********** */
-/* .scroll-top-btn {
+.scroll-top-btn {
   position: fixed;
   z-index: 999;
   bottom: 1vh;
@@ -177,10 +177,10 @@ video {
 .hidden {
   visibility: hidden;
   opacity: 0;
-} */
+}
 
 /* **********     DarkThemeButton     ********** */
-/* .dark-theme-btn {
+.dark-theme-btn {
   position: fixed;
   z-index: 999;
   bottom: 1vh;
@@ -206,7 +206,7 @@ video {
 .dark-mode {
   background-color: var(--second-color);
   color: var(--main-color);
-} */
+}
 
 /* **********     Network Status     ********** */
 /* .online,
