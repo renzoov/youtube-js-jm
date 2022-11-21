@@ -209,7 +209,7 @@ video {
 }
 
 /* **********     Network Status     ********** */
-/* .online,
+.online,
 .offline {
   position: sticky;
   top: 0;
@@ -224,7 +224,7 @@ video {
 
 .offline {
   background-color: #b71c1c;
-} */
+}
 
 /* **********     SearchFilters     ********** */
 /* .cards {
