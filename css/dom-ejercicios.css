@@ -317,7 +317,7 @@ video {
 }
 
 /* **********     ScrollSpy     ********** */
-/* @media screen and (min-width: 1024px) {
+@media screen and (min-width: 1024px) {
   body {
     display: grid;
     grid-template-columns: 80% 20%;
@@ -372,10 +372,10 @@ video {
     right: initial;
     left: calc(4.25rem + 1vw);
   }
-} */
+}
 
 /* **********     ContactForm Validations     ********** */
-/* .contact-form {
+.contact-form {
   --form-ok-color: #4caf50;
   --form-error-color: #f44336;
   margin-left: auto;
@@ -451,5 +451,5 @@ video {
   100% {
     visibility: visible;
     opacity: 1;
-  } 
-} */
+  }
+}
