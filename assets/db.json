@@ -56,9 +56,14 @@
       "id": 11
     },
     {
-      "nombre": "Dohko",
-      "constelacion": "Libra",
+      "nombre": "Milo",
+      "constelacion": "Escorpio",
       "id": 12
+    },
+    {
+      "nombre": "Shura",
+      "constelacion": "Capricornio",
+      "id": 13
     }
   ],
   "dioses": [
