@@ -8,7 +8,7 @@ if (isset($_POST)) {
   $comments = $_POST["comments"];
 
   $domain = $_SERVER["HTTP_HOST"];
-  $to = "jonmircha@gmail.com";
+  $to = "renzo.osorio1909@gmail.com";
   $subject_mail = "Contacto desde el formulario del sitio $domain.";
   $message = "
     <p>
